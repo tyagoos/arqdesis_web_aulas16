@@ -11,7 +11,7 @@ import factory.ConnectionFactory;
 public class ClienteDAO {
 	
 	public void incluir(ClienteTO to) {
-		String sqlInsert = "INSERT INTO cliente(id, nome, fone) VALUES (?, ?, ?)";
+/**		String sqlInsert = "INSERT INTO cliente(id, nome, fone) VALUES (?, ?, ?)";
 		// usando o try with resources do Java 7, que fecha o que abriu
 		try (Connection conn = ConnectionFactory.obtemConexao();
 				PreparedStatement stm = conn.prepareStatement(sqlInsert);) {
@@ -21,6 +21,14 @@ public class ClienteDAO {
 			stm.execute();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}
+**/
+		String sqlSelect = "select LAST_INSERT_ID()";
+		try(PreparedStatement pst1 = conn.prepareStatement(sqlSelect);
+				ResultSet rs = pst1.executeQuery();){
+			if(rs.next()){ idGerado = rs.getInt("id"); }
+		} catch (SQLException e) {
+		e.printStackTrace();
 		}
 	}
 

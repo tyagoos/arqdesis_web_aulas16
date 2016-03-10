@@ -3,5 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="E:/Alunos/android/eclipse/plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
+	<classpathentry kind="lib" path="F:/USJT/USJT - 2016/05 - QUARTA - Prof Bonato - ARQDESIS - Arquitetura e Desenvolvimento de Sistemas/mysql-connector-java-5.1.13-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
